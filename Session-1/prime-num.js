@@ -5,7 +5,7 @@
 function isPrime(number){
   if(number<=1) return false
   if(number<=3) return false
-  if(number%2==0 && number%3==0) return false 
+  if(number%2==0 || number%3==0) return false 
   let count = 0
   for(let i = 5 ; i * i <= number ; i+=6){
     count++
@@ -16,5 +16,5 @@ function isPrime(number){
   return [count, true]
 }
 
-console.log(isPrime(101));
+console.log(isPrime(4));
 console.log(isPrime(791));
